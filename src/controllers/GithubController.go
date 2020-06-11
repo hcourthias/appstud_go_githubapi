@@ -8,6 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+//get the events from GitHub API
 func getGitHubFeed(c *gin.Context) {
 	var data []interface{}
 	resp, err := http.Get("https://api.github.com/events")
@@ -31,6 +32,7 @@ func getGitHubFeed(c *gin.Context) {
 
 }
 
+//get user informations from GitHub API
 func getGithubUserInfo(c *gin.Context) {
 	var data interface{}
 	resp, err := http.Get("https://api.github.com/users/" + c.Param("login"))

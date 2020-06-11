@@ -28,7 +28,7 @@ func Init() {
 	usersCollection = db.Database("github-api").Collection("users")
 }
 
-// GetUserCollection allow to get the mongo client
+// GetUserCollection allow to get the users collection
 func GetUserCollection() *mongo.Collection {
 	return usersCollection
 }
