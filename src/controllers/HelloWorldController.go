@@ -6,7 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func handle(c *gin.Context) {
+func getHelloWorld(c *gin.Context) {
 	c.JSON(200, models.HelloWorldResponse{
 		Hello: "world!",
 	})
@@ -14,5 +14,5 @@ func handle(c *gin.Context) {
 
 // HelloWorldController - Route controller
 func HelloWorldController(engine *gin.Engine) {
-	engine.GET("/api/hello", handle)
+	engine.GET("/api/hello", getHelloWorld)
 }
